@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/userRegistration">Sign Up</a></li>
+                <li><a href="/userLogin">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Registration Page</h2>
+
+        <form action="/userRegistration" method="post">
+
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" placeholder="Only letters" name="name" id="name" required pattern="[a-z A-Z]+">
+            </div> <br>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Enter your email" name="email" id="email">
+            </div> <br>
+
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" placeholder="Only letters and numbers" name="username" id="usernmae" required
+                    pattern="[a-z A-Z 0-9]+">
+            </div> <br>
+
+            <div>
+                <label for="password">Password: </label>
+                <input required type="password" placeholder="Enter your password" name="password" id="password">
+            </div> <br>
+
+            <div>
+                <input type="submit" value="sign up">
+                <input type="reset" value="clear">
+            </div> <br>
+
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "3bf0ee01-b21e-4907-8dc7-fb98c617b628",
+		"name": "crudNewsBlog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21280729"
+	},
+	"item": [
+		{
+			"name": "get user home page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Najiffa Jannat",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "najifa14@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "najifa14",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/userRegistration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"userRegistration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "mahmud",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mahmud",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/userlogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"userlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user blog feed page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDg1NTA2MSwiZXhwIjoxNjU0ODU4NjYxfQ.HuUvotFpVxQn8jcbGvurpGPtCZ2hu5BpgGLzY5nDQ-U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user profile page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDgzNTY3NiwiZXhwIjoxNjU0ODM5Mjc2fQ.b5vfbbkpiFZ5PlLEurbGlmzKTXJ60wFUnrrZW3fUJTU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read all blogpost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDgzNTY3NiwiZXhwIjoxNjU0ODM5Mjc2fQ.b5vfbbkpiFZ5PlLEurbGlmzKTXJ60wFUnrrZW3fUJTU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/allblogpost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"allblogpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read blogpost from user himself",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDgzNTY3NiwiZXhwIjoxNjU0ODM5Mjc2fQ.b5vfbbkpiFZ5PlLEurbGlmzKTXJ60wFUnrrZW3fUJTU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/blogpost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read blogpost from specific user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDgzNTY3NiwiZXhwIjoxNjU0ODM5Mjc2fQ.b5vfbbkpiFZ5PlLEurbGlmzKTXJ60wFUnrrZW3fUJTU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/blogpost/salman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogpost",
+						"salman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create blogpost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDgzNTY3NiwiZXhwIjoxNjU0ODM5Mjc2fQ.b5vfbbkpiFZ5PlLEurbGlmzKTXJ60wFUnrrZW3fUJTU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Hello world",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/blogpost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update blogpost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haG11ZCIsInVzZXJpZCI6IjU0ZGE0M2M3LWY2NjAtNDllYy1hMzNmLWUwZmEyNjkyNDg3MSIsImlhdCI6MTY1NDg0Mjc0MSwiZXhwIjoxNjU0ODQ2MzQxfQ.t1EvTJnC8UH5F3bsK-hHqxMeQVAbpxZuxSxhBABfbNI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Design Pattern",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Behavioural Pattern",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/blogpost/8d432a95-cb73-494d-89e1-c53d228f81c8gargfasd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogpost",
+						"8d432a95-cb73-494d-89e1-c53d228f81c8gargfasd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete blogpost",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

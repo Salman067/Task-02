@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/Profile">Profile</a></li>
+                <li><a href="/ProfileUpdate">Edit Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Blog Post Page</h2>
+        </div>
+        <div>
+            <form action="/blogpost" method="post">
+                <div>
+                    <label for="title">Title: </label>
+                    <input type="text" placeholder="Only letters" name="title" id="title" required pattern="[a-z A-Z @$#%&!]+">
+                </div> <br>
+                <div>
+                    <label for="content">Content: </label> <br>
+                    <textarea name="content" id="content" placeholder="What's on your mind?" required cols="30"
+                        rows="5"></textarea>
+                </div> <br>
+                <div>
+                    <input type="submit" value="POST">
+                </div> <br>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
